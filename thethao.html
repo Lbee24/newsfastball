@@ -1,77 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tin Thể thao</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"/>
-<style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {font-family: 'Roboto', sans-serif; background-color: #f0f2f5; color: #333; line-height: 1.6;}
-    .navbar {background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: white; padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; justify-content: center; align-items: center;}
-    .navbar ul {list-style: none; display: flex; justify-content: center;}
-    .navbar li {margin: 0 15px;}
-    .navbar a {color: white; text-decoration: none; font-weight: bold; padding: 10px 15px; transition: background-color 0.3s, color 0.3s; border-radius: 5px;}
-    .navbar a:hover {background-color: #ff5e57; color: white;}
-    #current-time {margin-left: auto; margin-right: 20px; font-size: 14px; font-weight: bold;}
-    .container {max-width: 1200px; margin: 20px auto; padding: 0 20px;}
-    footer {background: linear-gradient(to right, #2c5364, #203a43, #0f2027); color: white; text-align: center; padding: 20px; margin-top: 40px;}
-    footer a {color: #f1f1f1; margin: 0 10px; text-decoration: none;}
-    footer a:hover {color: #ffd166;}
-</style>
+<meta charset="UTF-8">
+<title>Fastball News</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Tin tức Thể thao tổng hợp</h2>
-<ul>
-  <li><strong>Đội tuyển bóng chuyền nữ Việt Nam vô địch SEA Games</strong> — Chiến thắng lịch sử.</li>
-  <li><strong>F1: Verstappen tiếp tục thống trị mùa giải 2025</strong> — Red Bull không có đối thủ.</li>
-  <li><strong>ATP Tour: Djokovic giành danh hiệu thứ 95</strong> — Lịch sử tiếp tục được viết lại.</li>
-</ul>
-
-<nav class="navbar">
-<ul>
-<li><a href="index.html">Trang chủ</a></li>
-<li><a href="bongda.html">Bóng đá</a></li>
-<li><a href="thethao.html">Thể thao</a></li>
-<li><a href="lichthidau.html">Lịch thi đấu</a></li>
-</ul>
-<span id="current-time"></span>
+<nav>
+  <a href="index.html">Trang chủ</a>
+  <a href="bongda.html">Bóng đá</a>
+  <a href="thethao.html">Thể thao</a>
+  <a href="lichthidau.html">Lịch thi đấu</a>
 </nav>
+
 <div class="container">
+<h2>Tin tức Thể thao tổng hợp</h2>
 
-<h1 style='color:#e63946'>Tin thể thao nổi bật</h1>
-<article>
-<h2>Novak Djokovic vô địch Roland Garros 2025</h2>
-<p>Tay vợt người Serbia xuất sắc đánh bại Carlos Alcaraz trong trận chung kết kéo dài 5 set để giành Grand Slam thứ 25 trong sự nghiệp.</p>
-</article>
-<article>
-<h2>Đội tuyển bóng chuyền nữ Việt Nam giành HCV SEA Games</h2>
-<p>Tuyển nữ Việt Nam đã xuất sắc vượt qua Thái Lan 3-2 trong trận chung kết để lần đầu tiên giành huy chương vàng môn bóng chuyền tại SEA Games.</p>
-</article>
-<article>
-<h2>F1: Verstappen thắng chặng tại Miami Grand Prix</h2>
-<p>Tay đua Max Verstappen tiếp tục phong độ cao khi giành chiến thắng thuyết phục tại chặng đua Miami Grand Prix, nới rộng khoảng cách trên bảng xếp hạng tổng.</p>
-</article>
+<div class="news-item">
+  <img src="Bong-Chuyen-Nu-Vtvcu.jpg" alt="Bóng chuyền nữ Việt Nam" />
+  <div class="news-content">
+    <h3>Đội tuyển bóng chuyền nữ Việt Nam vô địch SEA Games</h3>
+    <p>Các cô gái Việt Nam xuất sắc vượt qua Thái Lan ở trận chung kết nghẹt thở.</p>
+  </div>
+</div>
+
+<div class="news-item">
+  <img src="A-nh-ma-n-hi-nh-2025-04-06-lu-5067-2053-1743950880.jpg" alt="F1 Verstappen" />
+  <div class="news-content">
+    <h3>F1: Verstappen tiếp tục thống trị mùa giải 2025</h3>
+    <p>Tay đua của Red Bull giành chiến thắng thứ 10 liên tiếp, bỏ xa phần còn lại.</p>
+  </div>
+</div>
+
+<div class="news-item">
+  <img src="djokovic-mensik-analisis-final-1261-7824-1743318163.jpg" alt="Djokovic danh hiệu" />
+  <div class="news-content">
+    <h3>ATP Tour: Djokovic giành danh hiệu thứ 95</h3>
+    <p>Tay vợt Serbia tiếp tục củng cố vị thế tay vợt vĩ đại nhất lịch sử.</p>
+  </div>
+</div>
 
 </div>
-<footer>
-<p>© 2025 Fastball News. All rights reserved.</p>
-<div>
-<a href="#">Facebook</a>
-<a href="#">YouTube</a>
-<a href="#">Liên hệ</a>
-</div>
-</footer>
-<script>
-function updateTime() {
-  const now = new Date();
-  const options = { hour12: false };
-  const timeString = now.toLocaleTimeString('vi-VN', options);
-  document.getElementById('current-time').textContent = timeString;
-}
-setInterval(updateTime, 1000);
-updateTime();
-</script>
-</body></html>
+</body>
+</html>

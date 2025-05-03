@@ -1,77 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tin Bóng đá</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"/>
-<style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {font-family: 'Roboto', sans-serif; background-color: #f0f2f5; color: #333; line-height: 1.6;}
-    .navbar {background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: white; padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; justify-content: center; align-items: center;}
-    .navbar ul {list-style: none; display: flex; justify-content: center;}
-    .navbar li {margin: 0 15px;}
-    .navbar a {color: white; text-decoration: none; font-weight: bold; padding: 10px 15px; transition: background-color 0.3s, color 0.3s; border-radius: 5px;}
-    .navbar a:hover {background-color: #ff5e57; color: white;}
-    #current-time {margin-left: auto; margin-right: 20px; font-size: 14px; font-weight: bold;}
-    .container {max-width: 1200px; margin: 20px auto; padding: 0 20px;}
-    footer {background: linear-gradient(to right, #2c5364, #203a43, #0f2027); color: white; text-align: center; padding: 20px; margin-top: 40px;}
-    footer a {color: #f1f1f1; margin: 0 10px; text-decoration: none;}
-    footer a:hover {color: #ffd166;}
-</style>
+<meta charset="UTF-8">
+<title>Fastball News</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Tin tức Bóng đá mới nhất</h2>
-<ul>
-  <li><strong>CLB Hà Nội thắng đậm 3-0 trước Viettel</strong> — Trận cầu tâm điểm V-League.</li>
-  <li><strong>Messi lập cú đúp giúp Inter Miami dẫn đầu MLS</strong> — Siêu sao tỏa sáng ở tuổi 38.</li>
-  <li><strong>Champions League chuẩn bị bốc thăm vòng bán kết</strong> — Nhiều đại gia chờ đợi.</li>
-</ul>
-
-<nav class="navbar">
-<ul>
-<li><a href="index.html">Trang chủ</a></li>
-<li><a href="bongda.html">Bóng đá</a></li>
-<li><a href="thethao.html">Thể thao</a></li>
-<li><a href="lichthidau.html">Lịch thi đấu</a></li>
-</ul>
-<span id="current-time"></span>
+<nav>
+  <a href="index.html">Trang chủ</a>
+  <a href="bongda.html">Bóng đá</a>
+  <a href="thethao.html">Thể thao</a>
+  <a href="lichthidau.html">Lịch thi đấu</a>
 </nav>
+
 <div class="container">
+<h2>Tin tức Bóng đá mới nhất</h2>
 
-<h1 style='color:#e63946'>Tin tức Bóng đá mới nhất</h1>
-<article>
-<h2>ĐT Việt Nam chuẩn bị cho vòng loại World Cup</h2>
-<p>HLV Philippe Troussier triệu tập 30 cầu thủ cho đợt tập trung chuẩn bị cho vòng loại World Cup 2026. Đáng chú ý, Công Phượng và Quang Hải đều trở lại sau thời gian vắng mặt.</p>
-</article>
-<article>
-<h2>Real Madrid giành vé vào chung kết Champions League</h2>
-<p>Real Madrid đánh bại Bayern Munich với tổng tỉ số 4-3 sau 2 lượt trận, qua đó chính thức góp mặt tại trận chung kết Champions League 2025 trên sân Wembley.</p>
-</article>
-<article>
-<h2>Messi lập hattrick tại MLS</h2>
-<p>Siêu sao Lionel Messi tiếp tục tỏa sáng khi ghi 3 bàn giúp Inter Miami thắng đậm New York Red Bulls 4-1 ở giải nhà nghề Mỹ (MLS).</p>
-</article>
+<div class="news-item">
+  <img src="9061.jpg" alt="CLB Hà Nội thắng Viettel" />
+  <div class="news-content">
+    <h3>CLB Hà Nội thắng đậm 3-0 trước Viettel</h3>
+    <p>Trận cầu tâm điểm V-League chứng kiến màn trình diễn áp đảo của đội bóng Thủ đô.</p>
+  </div>
+</div>
+
+<div class="news-item">
+  <img src="2025-03-30t010135z1952279897mt1usatoday25804142rtrmadp3mls-philadelphia-union-at-inter-miami-cf-1744257057600900846138.jpg" alt="Messi lập cú đúp" />
+  <div class="news-content">
+    <h3>Messi lập cú đúp giúp Inter Miami dẫn đầu MLS</h3>
+    <p>Siêu sao người Argentina tiếp tục thể hiện phong độ đỉnh cao dù đã 38 tuổi.</p>
+  </div>
+</div>
+
+<div class="news-item">
+  <img src="boc-tham3.jpg" alt="Bốc thăm C1" />
+  <div class="news-content">
+    <h3>Champions League chuẩn bị bốc thăm vòng bán kết</h3>
+    <p>Các đại gia châu Âu háo hức chờ đợi đối thủ ở vòng knock-out sắp tới.</p>
+  </div>
+</div>
 
 </div>
-<footer>
-<p>© 2025 Fastball News. All rights reserved.</p>
-<div>
-<a href="#">Facebook</a>
-<a href="#">YouTube</a>
-<a href="#">Liên hệ</a>
-</div>
-</footer>
-<script>
-function updateTime() {
-  const now = new Date();
-  const options = { hour12: false };
-  const timeString = now.toLocaleTimeString('vi-VN', options);
-  document.getElementById('current-time').textContent = timeString;
-}
-setInterval(updateTime, 1000);
-updateTime();
-</script>
-</body></html>
+</body>
+</html>

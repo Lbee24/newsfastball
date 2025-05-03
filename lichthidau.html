@@ -1,82 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lịch thi đấu</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"/>
-<style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {font-family: 'Roboto', sans-serif; background-color: #f0f2f5; color: #333; line-height: 1.6;}
-    .navbar {background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: white; padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; justify-content: center; align-items: center;}
-    .navbar ul {list-style: none; display: flex; justify-content: center;}
-    .navbar li {margin: 0 15px;}
-    .navbar a {color: white; text-decoration: none; font-weight: bold; padding: 10px 15px; transition: background-color 0.3s, color 0.3s; border-radius: 5px;}
-    .navbar a:hover {background-color: #ff5e57; color: white;}
-    #current-time {margin-left: auto; margin-right: 20px; font-size: 14px; font-weight: bold;}
-    .container {max-width: 1200px; margin: 20px auto; padding: 0 20px;}
-    footer {background: linear-gradient(to right, #2c5364, #203a43, #0f2027); color: white; text-align: center; padding: 20px; margin-top: 40px;}
-    footer a {color: #f1f1f1; margin: 0 10px; text-decoration: none;}
-    footer a:hover {color: #ffd166;}
-</style>
+<meta charset="UTF-8">
+<title>Fastball News</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<nav>
+  <a href="index.html">Trang chủ</a>
+  <a href="bongda.html">Bóng đá</a>
+  <a href="thethao.html">Thể thao</a>
+  <a href="lichthidau.html">Lịch thi đấu</a>
+</nav>
+
+<div class="container">
+
 <h2>Lịch thi đấu thể thao hôm nay</h2>
-<table border="1" cellpadding="5">
+<table>
   <tr><th>Môn</th><th>Trận đấu</th><th>Thời gian</th></tr>
   <tr><td>Bóng đá</td><td>Man City vs Real Madrid</td><td>02:00 AM</td></tr>
   <tr><td>Bóng chuyền</td><td>VN vs Thái Lan</td><td>05:00 PM</td></tr>
   <tr><td>F1</td><td>Chặng Monaco</td><td>08:00 PM</td></tr>
 </table>
 
-<nav class="navbar">
-<ul>
-<li><a href="index.html">Trang chủ</a></li>
-<li><a href="bongda.html">Bóng đá</a></li>
-<li><a href="thethao.html">Thể thao</a></li>
-<li><a href="lichthidau.html">Lịch thi đấu</a></li>
-</ul>
-<span id="current-time"></span>
-</nav>
-<div class="container">
-
-<h1 style='color:#e63946'>Lịch thi đấu thể thao</h1>
-<h2>Bóng đá</h2>
-<table style="width:100%; border-collapse: collapse; margin-top:10px;">
-<thead><tr><th>Ngày</th><th>Trận đấu</th><th>Địa điểm</th></tr></thead>
-<tbody>
-<tr><td>05/05/2025</td><td>Man City vs Real Madrid</td><td>Etihad Stadium</td></tr>
-<tr><td>06/05/2025</td><td>Arsenal vs Bayern Munich</td><td>Emirates Stadium</td></tr>
-<tr><td>10/05/2025</td><td>ĐT Việt Nam vs Thái Lan</td><td>Mỹ Đình</td></tr>
-</tbody></table>
-
-<h2 style='margin-top:20px;'>Tennis</h2>
-<table style="width:100%; border-collapse: collapse; margin-top:10px;">
-<thead><tr><th>Ngày</th><th>Trận đấu</th><th>Giải đấu</th></tr></thead>
-<tbody>
-<tr><td>07/05/2025</td><td>Djokovic vs Nadal</td><td>Rome Masters</td></tr>
-<tr><td>08/05/2025</td><td>Alcaraz vs Medvedev</td><td>Rome Masters</td></tr>
-</tbody></table>
-
 </div>
-<footer>
-<p>© 2025 Fastball News. All rights reserved.</p>
-<div>
-<a href="#">Facebook</a>
-<a href="#">YouTube</a>
-<a href="#">Liên hệ</a>
-</div>
-</footer>
-<script>
-function updateTime() {
-  const now = new Date();
-  const options = { hour12: false };
-  const timeString = now.toLocaleTimeString('vi-VN', options);
-  document.getElementById('current-time').textContent = timeString;
-}
-setInterval(updateTime, 1000);
-updateTime();
-</script>
-</body></html>
+</body>
+</html>

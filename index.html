@@ -1,268 +1,46 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="UTF-8">
 <title>Fastball News</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"/>
-<style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f0f2f5;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .navbar {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
-
-    .navbar li {
-      margin: 0 15px;
-    }
-
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 15px;
-      transition: background-color 0.3s, color 0.3s;
-      border-radius: 5px;
-    }
-
-    .navbar a:hover {
-      background-color: #ff5e57;
-      color: white;
-    }
-
-    #current-time {
-      margin-left: auto;
-      margin-right: 20px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-
-    .highlight-news {
-      margin-bottom: 30px;
-    }
-
-    .highlight-news img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .highlight-news img:hover {
-      transform: scale(1.02);
-    }
-
-    .highlight-news h2 {
-      font-size: 26px;
-      color: #e63946;
-      margin-top: 15px;
-    }
-
-    .news-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .news-item {
-      background-color: #ffffff;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease;
-    }
-
-    .news-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .news-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .news-item img:hover {
-      transform: scale(1.03);
-    }
-
-    .news-item h3 {
-      font-size: 18px;
-      margin-bottom: 5px;
-      color: #1d3557;
-    }
-
-    .news-item p {
-      font-size: 14px;
-      color: #555;
-    }
-
-    .schedule-table {
-      width: 100%;
-      margin-top: 30px;
-      border-collapse: collapse;
-      background: #ffffff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .schedule-table th {
-      background-color: #1d3557;
-      color: white;
-    }
-
-    .schedule-table th, .schedule-table td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-      font-size: 14px;
-    }
-
-    .schedule-table tr:nth-child(even) {
-      background-color: #f8f9fa;
-    }
-
-    .schedule-table tr:hover {
-      background-color: #edf2f4;
-    }
-
-    footer {
-      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #f1f1f1;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #ffd166;
-    }
-  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar">
-<ul>
-<li><a href="#">Trang chủ</a></li>
-<li><a href="#">Bóng đá</a></li>
-<li><a href="#">Thể thao</a></li>
-<li><a href="#">Lịch thi đấu</a></li>
-</ul>
-<span id="current-time"></span>
+
+<nav>
+  <a href="index.html">Trang chủ</a>
+  <a href="bongda.html">Bóng đá</a>
+  <a href="thethao.html">Thể thao</a>
+  <a href="lichthidau.html">Lịch thi đấu</a>
 </nav>
+
 <div class="container">
-<section class="highlight-news">
-<img alt="Man City vs Real" src="https://cdnmedia.thethaovanhoa.vn/Upload/9ZbMjH56Ygsknh3vJxeA/files/2024/05/mancityreal.jpg"/>
-<h2>Trận cầu đinh: Man City vs Real Madrid</h2>
-</section>
-<section class="news-list">
+<h2>Tin tức nổi bật</h2>
+
 <div class="news-item">
-<img alt="Mbappe rời PSG" src="https://cdnmedia.baotintuc.vn/Upload/R2ZpVzYTZmA/2024/04/22/mbappe-roi-psg.jpg"/>
-<h3>Mbappe chính thức rời PSG sau mùa giải này</h3>
-<p>Ngôi sao người Pháp đã xác nhận sẽ ra đi khi hết hợp đồng.</p>
+  <img src="minh-khoa-ngay-20-4-read-only-1713660448028204063745-1713688700852.jpg" alt="U23 Việt Nam" />
+  <div class="news-content">
+    <h3>U23 Việt Nam giành vé vào chung kết U23 Đông Nam Á</h3>
+    <p>Đội bóng trẻ của HLV Hoàng Anh Tuấn đánh bại U23 Thái Lan với tỷ số 2-1 đầy thuyết phục.</p>
+  </div>
 </div>
+
 <div class="news-item">
-<img alt="Barca thắng Atletico" src="https://cdnmedia.baotintuc.vn/Upload/9ZbMjH56Ygsknh3vJxeA/files/2024/03/barca-thang.jpg"/>
-<h3>Barca thắng kịch tính trước Atletico</h3>
-<p>Trận đấu gay cấn kết thúc với chiến thắng sát nút cho Barca.</p>
+  <img src="2025_SEA_Games.svg.png" alt="SEA Games 2025" />
+  <div class="news-content">
+    <h3>Việt Nam sẽ đăng cai SEA Games 2025</h3>
+    <p>Đại hội thể thao Đông Nam Á lần thứ 33 sẽ chính thức tổ chức tại Hà Nội và TP.HCM.</p>
+  </div>
 </div>
+
 <div class="news-item">
-<img alt="Ronaldo hattrick" src="https://cdnmedia.baotintuc.vn/Upload/fxGaPFeY2fA/2024/04/22/ronaldo-hattrick-1-111338.jpg"/>
-<h3>Ronaldo lập cú hattrick tại Ả Rập</h3>
-<p>CR7 tiếp tục thể hiện phong độ đỉnh cao tại giải đấu mới.</p>
+  <img src="21fb59f010bef9e0a0af.jpg" />
+  <div class="news-content">
+    <h3>V-League 2025 hứa hẹn nhiều bất ngờ</h3>
+    <p>Các CLB đầu tư mạnh mẽ, giải đấu hứa hẹn hấp dẫn bậc nhất khu vực Đông Nam Á.</p>
+  </div>
 </div>
-<div class="news-item">
-<img alt="Inter vô địch Serie A" src="https://cdnmedia.baotintuc.vn/Upload/9ZbMjH56Ygsknh3vJxeA/files/2024/04/inter-milan-vo-dich.jpg"/>
-<h3>Inter Milan giành Scudetto sớm 5 vòng</h3>
-<p>Đội bóng áo xanh đen chính thức lên ngôi vô địch Serie A mùa 2024/25 sau chiến thắng trước AC Milan.</p>
+
 </div>
-<div class="news-item">
-<img alt="Haaland lập poker" src="https://cdnmedia.baotintuc.vn/Upload/9ZbMjH56Ygsknh3vJxeA/files/2024/04/haaland-poker.jpg"/>
-<h3>Erling Haaland lập poker trong chiến thắng 6-2</h3>
-<p>Tiền đạo người Na Uy tỏa sáng rực rỡ giúp Man City giành chiến thắng áp đảo tại Ngoại hạng Anh.</p>
-</div>
-</section>
-<h2 style="margin-top: 40px; margin-bottom: 10px; color: #1d3557;">Lịch thi đấu</h2>
-<table class="schedule-table">
-<thead>
-<tr>
-<th>Thời gian</th>
-<th>Trận đấu</th>
-<th>Địa điểm</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>20:00 - 05/05/2025</td>
-<td>Man City vs Real Madrid</td>
-<td>Etihad Stadium</td>
-</tr>
-<tr>
-<td>22:00 - 06/05/2025</td>
-<td>Arsenal vs Bayern Munich</td>
-<td>Emirates Stadium</td>
-</tr>
-</tbody>
-</table>
-</div>
-<footer>
-<p>© 2025 Fastball News. All rights reserved.</p>
-<div>
-<a href="#">Facebook</a>
-<a href="#">YouTube</a>
-<a href="#">Liên hệ</a>
-</div>
-</footer>
-<script>
-    function updateTime() {
-      const now = new Date();
-      const options = { hour12: false };
-      const timeString = now.toLocaleTimeString('vi-VN', options);
-      document.getElementById('current-time').textContent = timeString;
-    }
-    setInterval(updateTime, 1000);
-    updateTime();
-  </script>
 </body>
 </html>
